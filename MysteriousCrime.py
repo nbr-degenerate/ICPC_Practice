@@ -15,9 +15,11 @@ def murder() -> int:
                 for l in range(y):
                     if (l==i):
                         continue
-                    if (" ".join([o for o in s])) in (" ".join([o for o in matrix[l]])):
+                    #if (" ".join([o for o in s])) in (" ".join([o for o in matrix[l]])):
+                    if SubsInMatrix(s,matrix[l]):
                         continue
                     arg=0; break
                 count+= arg           
     return count
+
 print(murder())
